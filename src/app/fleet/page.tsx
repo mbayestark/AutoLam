@@ -3,7 +3,17 @@ import Footer from "../../components/Footer";
 import CarCard from "../../components/CarCard";
 import React from "react";
 
-const cars = [
+interface Car {
+  image: string;
+  name: string;
+  category: string;
+  transmission: string;
+  seats: number;
+  ac: boolean;
+  price: string;
+}
+
+const cars: Car[] = [
   {
     image: "/assets/CarPics/LC300.jpg",
     name: "Toyota LC 300",
@@ -97,9 +107,9 @@ const cars = [
 ];
 
 const categories = [
-  { key: "Luxe", label: "Luxe & Premium", filter: (c: any) => c.category.toLowerCase().includes("luxe") },
-  { key: "SUV", label: "SUV", filter: (c: any) => c.category.toLowerCase().includes("suv") },
-  { key: "Pick-up", label: "Pick-ups & 4x4", filter: (c: any) => c.category.toLowerCase().includes("pick-up") || c.category.toLowerCase().includes("4x4") },
+  { key: "Luxe", label: "Luxe & Premium", filter: (c: Car) => c.category.toLowerCase().includes("luxe") },
+  { key: "SUV", label: "SUV", filter: (c: Car) => c.category.toLowerCase().includes("suv") },
+  { key: "Pick-up", label: "Pick-ups & 4x4", filter: (c: Car) => c.category.toLowerCase().includes("pick-up") || c.category.toLowerCase().includes("4x4") },
 ];
 
 export default function FleetPage() {
