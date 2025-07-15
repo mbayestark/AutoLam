@@ -118,11 +118,27 @@ export default function QuickBookingWidget() {
           <div className="flex flex-col gap-2">
             <label className="font-medium text-gray-800 flex flex-col gap-1 text-sm">
               Date de départ
-              <input type="date" name="pickupDate" value={form.pickupDate} onChange={handleChange} className="input" required />
+              <input
+                type="date"
+                name="pickupDate"
+                value={form.pickupDate}
+                onChange={handleChange}
+                className="input"
+                required
+                min={new Date().toISOString().split('T')[0]}
+              />
             </label>
             <label className="font-medium text-gray-800 flex flex-col gap-1 text-sm">
               Date de retour
-              <input type="date" name="dropoffDate" value={form.dropoffDate} onChange={handleChange} className="input" required />
+              <input
+                type="date"
+                name="dropoffDate"
+                value={form.dropoffDate}
+                onChange={handleChange}
+                className="input"
+                required
+                min={form.pickupDate ? new Date(new Date(form.pickupDate).getTime() + 24*60*60*1000).toISOString().split('T')[0] : new Date().toISOString().split('T')[0]}
+              />
             </label>
           </div>
         )}
