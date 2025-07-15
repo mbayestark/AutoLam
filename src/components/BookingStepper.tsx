@@ -78,7 +78,7 @@ export default function BookingStepper({ initialCar }: BookingStepperProps) {
     if (initialCar && !form.car) {
       setForm((f) => ({ ...f, car: initialCar }));
     }
-  }, [initialCar]);
+  }, [initialCar, form.car]);
 
   const next = () => setStep((s) => Math.min(s + 1, steps.length - 1));
   const back = () => setStep((s) => Math.max(s - 1, 0));
