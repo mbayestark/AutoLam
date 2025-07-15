@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface CarCardProps {
   image: string;
@@ -14,7 +15,9 @@ interface CarCardProps {
 export default function CarCard({ image, name, category, transmission, seats, ac, price }: CarCardProps) {
   return (
     <div className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col">
-      <img src={image} alt={name} className="w-full h-40 object-cover" />
+      <div className="relative w-full h-40">
+        <Image src={image} alt={name} fill className="object-cover rounded-t-xl" />
+      </div>
       <div className="p-4 flex-1 flex flex-col justify-between">
         <div>
           <div className="text-orange-700 font-bold text-lg mb-1">{name}</div>
