@@ -2,12 +2,6 @@
 import React, { useState } from "react";
 
 const steps = ["Dates", "Retrait ou Livraison", "Véhicule", "Chauffeur", "Résumé"];
-const locations = [
-  "Aéroport Blaise Diagne",
-  "Centre-ville Dakar",
-  "Saly",
-  "Autre (précisez en commentaire)",
-];
 const cars = [
   "Toyota LC 300",
   "Range Rover",
