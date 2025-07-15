@@ -1,6 +1,6 @@
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
-import CarCard from "../../components/CarCard";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import CarCard from "../components/CarCard";
 import React from "react";
 
 interface Car {
