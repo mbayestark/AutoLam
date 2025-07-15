@@ -143,11 +143,27 @@ export default function BookingStepper({ initialCar }: BookingStepperProps) {
           <div className="flex flex-col gap-4">
             <label className="font-semibold text-gray-700 flex flex-col gap-2">
               Date de départ
-              <input type="date" name="pickupDate" value={form.pickupDate} onChange={handleChange} className="input" required />
+              <input
+                type="date"
+                name="pickupDate"
+                value={form.pickupDate}
+                onChange={handleChange}
+                className="input"
+                required
+                min={new Date().toISOString().split('T')[0]}
+              />
             </label>
             <label className="font-semibold text-gray-700 flex flex-col gap-2">
               Date de retour
-              <input type="date" name="dropoffDate" value={form.dropoffDate} onChange={handleChange} className="input" required />
+              <input
+                type="date"
+                name="dropoffDate"
+                value={form.dropoffDate}
+                onChange={handleChange}
+                className="input"
+                required
+                min={form.pickupDate ? new Date(new Date(form.pickupDate).getTime() + 24*60*60*1000).toISOString().split('T')[0] : new Date().toISOString().split('T')[0]}
+              />
             </label>
           </div>
         )}
