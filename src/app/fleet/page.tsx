@@ -60,7 +60,7 @@ const cars: Car[] = [
     price: "Sur demande",
   },
   {
-    image: "/assets/CarPics/WhiteMit-l200.png",
+    image: "/assets/CarPics/WhiteMit-l200.jpg",
     name: "Mitsubishi L200 (Blanc)",
     category: "Pick-up",
     transmission: "Manuelle",
