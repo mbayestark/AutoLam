@@ -60,7 +60,7 @@ const cars: Car[] = [
     price: "Sur demande",
   },
   {
-    image: "/assets/CarPics/WhiteMit-l200.jpg",
+    image: "/assets/CarPics/mitL200b.png",
     name: "Mitsubishi L200 (Blanc)",
     category: "Pick-up",
     transmission: "Manuelle",
@@ -69,7 +69,7 @@ const cars: Car[] = [
     price: "60 000 FCFA/jour",
   },
   {
-    image: "/assets/CarPics/GreyMit-l200.jpg",
+    image: "/assets/CarPics/mitL200g.png",
     name: "Mitsubishi L200 (Gris)",
     category: "Pick-up",
     transmission: "Manuelle",
