@@ -48,7 +48,7 @@ const cars: Car[] = [
     transmission: "Automatique",
     seats: 5,
     ac: true,
-    price: "75 000 FCFA/jour",
+    price: "55 000 FCFA/jour",
   },
   {
     image: "/assets/CarPics/patrol.jpg",
