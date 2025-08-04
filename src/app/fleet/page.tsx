@@ -90,7 +90,7 @@ const cars: Car[] = [
     image: "/assets/CarPics/FordRanger.png",
     name: "Ford Ranger",
     category: "Pick-up",
-    transmission: "Automatique",
+    transmission: "Manuelle",
     seats: 5,
     ac: true,
     price: "60 000 FCFA/jour",
