@@ -87,7 +87,7 @@ const cars: Car[] = [
     price: "100 000 FCFA/jour",
   },
   {
-    image: "/assets/CarPics/FordRanger.png",
+    image: "/assets/CarPics/FordRanger.jpg",
     name: "Ford Ranger",
     category: "Pick-up",
     transmission: "Manuelle",
