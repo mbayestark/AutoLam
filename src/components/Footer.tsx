@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="text-center md:text-left">
           <div className="font-bold text-lg">AUTO-LAM</div>
           <div className="text-sm">Médina Rue 19x28, en face agence nationale BCEAO, Centenaire</div>
-          <div className="text-sm">Tél/WhatsApp: <a href="https://wa.me/221761858766" className="underline">+221 781194929</a></div>
+          <div className="text-sm">Tél/WhatsApp: <a href="https://wa.me/221761858766" className="underline">+221 761858766</a></div>
         </div>
         <div className="text-center md:text-right text-xs opacity-80">
           © {new Date().getFullYear()} AUTO-LAM. Tous droits réservés.
