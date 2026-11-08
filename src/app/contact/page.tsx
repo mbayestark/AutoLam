@@ -1,34 +1,57 @@
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
+import type { Metadata } from "next";
 import ContactForm from "../../components/ContactForm";
+import { business } from "../../lib/data";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description: `Adresse, horaires et contact WhatsApp d'Auto-Lam à Dakar.`,
+};
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50">
-      <Header />
-      <main className="flex-1 max-w-lg md:max-w-3xl mx-auto w-full px-2 sm:px-4 py-6 sm:py-10 animate-fadein">
-        <h1 className="text-2xl sm:text-3xl font-bold text-orange-700 mb-6 sm:mb-8 text-center">Contact & Agence</h1>
-        <div className="bg-white rounded-xl shadow-md p-4 sm:p-6 mb-6 sm:mb-8 border border-orange-100">
-          <div className="mb-4">
-            <div className="font-bold text-lg text-orange-700 mb-1">Adresse</div>
-            <div>Médina Rue 19x28, en face agence nationale BCEAO, Centenaire</div>
-          </div>
-          <div className="mb-4">
-            <div className="font-bold text-lg text-orange-700 mb-1">Téléphone / WhatsApp</div>
-            <a href="https://wa.me/221776510839" className="underline text-blue-700">+221 77 651 08 39</a>
-          </div>
-          <div className="mb-4">
-            <div className="font-bold text-lg text-orange-700 mb-1">Email</div>
-            <a href="mailto:contact@autolam.sn" className="underline text-blue-700">contact@autolam.sn</a>
+    <div className="max-w-3xl mx-auto w-full px-4 py-8 sm:py-12 animate-fadein">
+      <h1 className="text-2xl sm:text-3xl font-bold text-orange-700 mb-8 text-center">Contact & agence</h1>
+      <div className="grid gap-6 md:grid-cols-2">
+        <dl className="bg-white rounded-xl shadow-md p-6 border border-orange-100 space-y-4 text-gray-800">
+          <div>
+            <dt className="font-bold text-orange-700">Adresse</dt>
+            <dd>
+              <a
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(business.address + ", Dakar")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline decoration-orange-300 hover:text-orange-700"
+              >
+                {business.address}
+              </a>
+            </dd>
           </div>
           <div>
-            <div className="font-bold text-lg text-orange-700 mb-1">Horaires</div>
-            <div>Lun-Sam: 8h-18h, Dim: 9h-16h</div>
+            <dt className="font-bold text-orange-700">Téléphone / WhatsApp</dt>
+            <dd className="flex flex-wrap gap-x-3">
+              <a href={`tel:+${business.whatsapp}`} className="underline decoration-orange-300 hover:text-orange-700">
+                {business.phoneDisplay}
+              </a>
+              <a href={`https://wa.me/${business.whatsapp}`} className="text-green-700 font-semibold hover:underline">
+                WhatsApp
+              </a>
+            </dd>
           </div>
-        </div>
+          <div>
+            <dt className="font-bold text-orange-700">Email</dt>
+            <dd>
+              <a href={`mailto:${business.email}`} className="underline decoration-orange-300 hover:text-orange-700">
+                {business.email}
+              </a>
+            </dd>
+          </div>
+          <div>
+            <dt className="font-bold text-orange-700">Horaires</dt>
+            <dd>{business.hours}</dd>
+          </div>
+        </dl>
         <ContactForm />
-      </main>
-      <Footer />
+      </div>
     </div>
   );
 }

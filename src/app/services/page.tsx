@@ -1,6 +1,11 @@
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
+import type { Metadata } from "next";
+import Link from "next/link";
 import ServiceCard from "../../components/ServiceCard";
+
+export const metadata: Metadata = {
+  title: "Services",
+  description: "Location courte et longue durée, chauffeur, transfert aéroport et solutions entreprise à Dakar.",
+};
 
 const services = [
   {
@@ -32,17 +37,18 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50">
-      <Header />
-      <main className="flex-1 max-w-5xl mx-auto w-full px-2 sm:px-4 py-6 sm:py-10 animate-fadein">
-        <h1 className="text-2xl sm:text-3xl font-bold text-orange-700 mb-6 sm:mb-8 text-center">Nos Services</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
-          {services.map((service, idx) => (
-            <ServiceCard key={idx} {...service} />
-          ))}
-        </div>
-      </main>
-      <Footer />
+    <div className="max-w-5xl mx-auto w-full px-4 py-8 sm:py-12 animate-fadein">
+      <h1 className="text-2xl sm:text-3xl font-bold text-orange-700 mb-8 text-center">Nos services</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {services.map((service) => (
+          <ServiceCard key={service.title} {...service} />
+        ))}
+      </div>
+      <div className="mt-10 text-center">
+        <Link href="/booking" className="inline-block rounded-full bg-orange-600 px-6 py-3 font-bold text-white hover:bg-orange-700">
+          Réserver un véhicule
+        </Link>
+      </div>
     </div>
   );
 }
