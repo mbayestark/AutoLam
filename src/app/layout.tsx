@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description: "Flotte moderne, tarifs clairs, réservation via WhatsApp.",
     locale: "fr_SN",
     type: "website",
-    images: ["/assets/CarPics/LC300.jpg"],
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Toyota Land Cruiser 300, Auto-Lam" }],
   },
   icons: { icon: "/favicon.ico" },
 };

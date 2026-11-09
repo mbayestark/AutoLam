@@ -36,7 +36,7 @@ export const carModels: CarModel[] = [
     ac: true,
     pricePerDay: 300000,
     chauffeurIncluded: true,
-    photos: [{ src: "/assets/CarPics/LC300.jpg" }],
+    photos: [{ src: "/assets/CarPics/lc300.webp" }],
   },
   {
     name: "Range Rover",
@@ -47,8 +47,8 @@ export const carModels: CarModel[] = [
     pricePerDay: 300000,
     chauffeurIncluded: true,
     photos: [
-      { src: "/assets/CarPics/WhiteRange.jpg", label: "Blanc" },
-      { src: "/assets/CarPics/BlackRange.jpg", label: "Noir" },
+      { src: "/assets/CarPics/range-rover-blanc.webp", label: "Blanc" },
+      { src: "/assets/CarPics/range-rover-noir.webp", label: "Noir" },
     ],
   },
   {
@@ -58,7 +58,7 @@ export const carModels: CarModel[] = [
     seats: 5,
     ac: true,
     pricePerDay: 55000,
-    photos: [{ src: "/assets/CarPics/Kia.png" }],
+    photos: [{ src: "/assets/CarPics/kia-sportage.webp" }],
   },
   {
     name: "Nissan Patrol",
@@ -67,7 +67,7 @@ export const carModels: CarModel[] = [
     seats: 7,
     ac: true,
     pricePerDay: null,
-    photos: [{ src: "/assets/CarPics/patrol.jpg" }],
+    photos: [{ src: "/assets/CarPics/nissan-patrol.webp" }],
   },
   {
     name: "Mitsubishi Pajero",
@@ -76,7 +76,7 @@ export const carModels: CarModel[] = [
     seats: 7,
     ac: true,
     pricePerDay: 90000,
-    photos: [{ src: "/assets/CarPics/pajero.png" }],
+    photos: [{ src: "/assets/CarPics/mitsubishi-pajero.webp" }],
   },
   {
     name: "Mitsubishi L200",
@@ -86,8 +86,8 @@ export const carModels: CarModel[] = [
     ac: true,
     pricePerDay: 60000,
     photos: [
-      { src: "/assets/CarPics/mitL200b.png", label: "Blanc" },
-      { src: "/assets/CarPics/mitL200g.png", label: "Gris" },
+      { src: "/assets/CarPics/l200-blanc.webp", label: "Blanc" },
+      { src: "/assets/CarPics/l200-gris.webp", label: "Gris" },
     ],
   },
   {
@@ -97,7 +97,7 @@ export const carModels: CarModel[] = [
     seats: 5,
     ac: true,
     pricePerDay: 100000,
-    photos: [{ src: "/assets/CarPics/tacoma.jpg" }],
+    photos: [{ src: "/assets/CarPics/toyota-tacoma.webp" }],
   },
   {
     name: "Ford Ranger",
@@ -106,7 +106,7 @@ export const carModels: CarModel[] = [
     seats: 5,
     ac: true,
     pricePerDay: 60000,
-    photos: [{ src: "/assets/CarPics/FordRanger.jpg" }],
+    photos: [{ src: "/assets/CarPics/ford-ranger.webp" }],
   },
 ];
 
